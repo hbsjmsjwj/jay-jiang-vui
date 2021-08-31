@@ -1,6 +1,6 @@
 {
   "name": "jay-jiang-vui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "main": "dist/jay-jiang-vui.umd.js",
   "scripts": {

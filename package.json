@@ -1,7 +1,8 @@
 {
   "name": "jay-jiang-vui",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "private": false,
+  "main": "dist/jay-jiang-vui.umd.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -37,6 +38,11 @@
     },
     "rules": {}
   },
+  "keywords": [
+    "ui",
+    "vue",
+    "jay"
+  ],
   "browserslist": [
     "> 1%",
     "last 2 versions",

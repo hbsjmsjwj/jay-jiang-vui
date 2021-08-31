@@ -1,24 +1,21 @@
 # jay-jiang-vui
 
-## Project setup
+## vue组件库
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 安装
 ```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
+npm i jay-jiang-vui
 ```
 
-### Lints and fixes files
+### 使用方式
 ```
-npm run lint
+//main.js
+import JayVUI from 'jay-jiang-vui'
+import 'jay-jiang-vui/dist/jay-jiang-vui.css'
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Email
+`756774388@qq.com`

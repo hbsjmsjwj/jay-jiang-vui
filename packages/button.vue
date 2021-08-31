@@ -1,5 +1,5 @@
 <template>
-  <button class="one-button" :class="[`one-button-${type}`,{
+  <button class="jay-button" :class="[`jay-button-${type}`,{
     'is-plain':plain,
     'is-round':round,
     'is-circle':circle,
@@ -8,7 +8,7 @@
   @click="handleClick"
   :disabled="disabled"
   >
-  <i v-if="icon" :class="`one-icon-${icon}`"></i>
+  <i v-if="icon" :class="`jay-icon-${icon}`"></i>
   <!-- 如果没传入文本插槽，则不显示span内容 -->
    <span v-if="$slots.default"><slot></slot></span>
   </button>
@@ -60,7 +60,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .one-button{
+  .jay-button{
     display: inline-block;
     line-height: 1;
     white-space: nowrap;
@@ -90,7 +90,7 @@ export default {
       background-color: #ecf5ff;
     }
   }
-.one-button-primary{
+.jay-button-primary{
   color:#fff;
   background-color: #409eff;
   border-color: #409eff;
@@ -101,7 +101,7 @@ export default {
     color: #fff;
     }
   }
-  .one-button-success{
+  .jay-button-success{
   color:#fff;
   background-color: #67c23a;
   border-color: #67c23a;
@@ -112,7 +112,7 @@ export default {
     color: #fff;
     }
   }
-  .one-button-info{
+  .jay-button-info{
   color:#fff;
   background-color: #909399;
   border-color: #909399;
@@ -123,7 +123,7 @@ export default {
     color: #fff;
     }
   }
-  .one-button-warning{
+  .jay-button-warning{
   color:#fff;
   background-color: #e6a23c;
   border-color: #e6a23c;
@@ -134,7 +134,7 @@ export default {
     color: #fff;
     }
   }
-  .one-button-danger{
+  .jay-button-danger{
   color:#fff;
   background-color: #f56c6c;
   border-color: #f56c6c;
@@ -146,7 +146,7 @@ export default {
     }
   }
 // 朴素按钮样式
-.one-button.is-plain{
+.jay-button.is-plain{
   &:hover,
   &:focus{
     background: #fff;
@@ -154,7 +154,7 @@ export default {
     color: #409eff;
   }
 }
-.one-button-primary.is-plain{
+.jay-button-primary.is-plain{
   color: #409eff;
   background: #ecf5ff;
   &:hover,
@@ -164,7 +164,7 @@ export default {
     color: #fff;
   }
 }
-.one-button-success.is-plain{
+.jay-button-success.is-plain{
   color: #67c23a;
   background: #c2e7b0;
   &:hover,
@@ -174,7 +174,7 @@ export default {
     color: #fff;
   }
 }
-.one-button-info.is-plain{
+.jay-button-info.is-plain{
   color: #909399;
   background: #d3d4d6;
   &:hover,
@@ -184,7 +184,7 @@ export default {
     color: #fff;
   }
 }
-.one-button-warning.is-plain{
+.jay-button-warning.is-plain{
   color: #e6a23c;
   background: #f5dab1;
   &:hover,
@@ -194,7 +194,7 @@ export default {
     color: #fff;
   }
 }
-.one-button-danger.is-plain{
+.jay-button-danger.is-plain{
   color: #f56c6c;
   background: #fbc4c4;
   &:hover,
@@ -205,21 +205,21 @@ export default {
   }
 }
 // round属性
-.one-button.is-round{
+.jay-button.is-round{
   border-radius: 20px;
   padding: 12px 23px;
 }
 // circle属性
-.one-button.is-circle{
+.jay-button.is-circle{
   border-radius: 50%;
   padding: 12px;
 }
 // icon配套样式
-.one-button [class*=one-icon-]+span{
+.jay-button [class*=jay-icon-]+span{
   margin-left: 5px;
 }
 // disabled属性
-.one-button.is-disabled{
+.jay-button.is-disabled{
    cursor: no-drop;
 }
 </style>

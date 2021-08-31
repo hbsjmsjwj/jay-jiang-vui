@@ -1,7 +1,7 @@
 <template>
-  <div class="one-form-item">
-    <label :style="labelStyle" class="one-form-item_label">{{label}}</label>
-    <div class="one-form-item_content">
+  <div class="jay-form-item">
+    <label :style="labelStyle" class="jay-form-item_label">{{label}}</label>
+    <div class="jay-form-item_content">
       <slot></slot>
     </div>
   </div>
@@ -27,9 +27,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .one-form-item{
+  .jay-form-item{
     margin-bottom: 25px;
-    .one-form-item_label{
+    .jay-form-item_label{
       text-align: right;
       vertical-align: middle;
       float: left;
@@ -39,7 +39,7 @@ export default {
       padding: 0 12px 0 0;
       box-sizing: border-box;
     }
-    .one-form-item_content{
+    .jay-form-item_content{
       line-height: 40px;
       position: relative;
       font-size: 14px;

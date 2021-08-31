@@ -1,15 +1,15 @@
 <template>
-  <label class="one-checkbox" :class="{' is-checked':isChecked}">
-    <span class="one-checkbox_input">
-      <span class="one-checkbox_inner"></span>
+  <label class="jay-checkbox" :class="{' is-checked':isChecked}">
+    <span class="jay-checkbox_input">
+      <span class="jay-checkbox_inner"></span>
       <input type="checkbox"
-      class="one-checkbox_original"
+      class="jay-checkbox_original"
       :name="name"
       v-model="model"
       :value="label"
       >
     </span>
-    <span class="one-checkbox_label">
+    <span class="jay-checkbox_label">
       <slot></slot>
       <template v-if="!$slots.default">
         {{label}}
@@ -62,7 +62,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .one-checkbox{
+  .jay-checkbox{
     color: #606266;
     font-weight: 500;
     font-size: 14px;
@@ -72,7 +72,7 @@ export default {
     white-space: nowrap;
     user-select: none;
     margin-right: 30px;
-    .one-checkbox_input{
+    .jay-checkbox_input{
       white-space: nowrap;
       cursor: pointer;
       outline: none;
@@ -80,7 +80,7 @@ export default {
       line-height: 1;
       position: relative;
       vertical-align: middle;
-      .one-checkbox_inner{
+      .jay-checkbox_inner{
         display: inline-block;
         position: relative;
         border: 1px solid #dcdfe6;
@@ -107,7 +107,7 @@ export default {
           transform-origin: center;
         }
       }
-      .one-checkbox_original{
+      .jay-checkbox_original{
         opacity: 0;
         outline: none;
         position: absolute;
@@ -118,7 +118,7 @@ export default {
         z-index: -1;
       }
     }
-    .one-checkbox_label{
+    .jay-checkbox_label{
       display: inline-block;
       padding-left: 10px;
       line-height: 19px;
@@ -126,9 +126,9 @@ export default {
     }
   }
   // 选中的样式
-  .one-checkbox.is-checked{
-    .one-checkbox_input{
-      .one-checkbox_inner{
+  .jay-checkbox.is-checked{
+    .jay-checkbox_input{
+      .jay-checkbox_inner{
         background-color: #409eff;
         border-color: #409eff;
       }
@@ -136,7 +136,7 @@ export default {
         transform: rotate(45deg) scaleY(1);
       }
     }
-    .one-checkbox_label{
+    .jay-checkbox_label{
       color: #409eff;
     }
   }

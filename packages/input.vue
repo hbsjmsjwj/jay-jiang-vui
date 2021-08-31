@@ -1,7 +1,7 @@
 <template>
- <div class="one-input" :class="{'one-input_suffix':showSuffix}">
+ <div class="jay-input" :class="{'jay-input_suffix':showSuffix}">
    <input
-   class="one-input_inner"
+   class="jay-input_inner"
    :class="{'is-disabled': disabled}"
    :placeholder="placeholder"
    :type="showPassword ? (passwordVisible ? 'text' : 'password') : type"
@@ -9,9 +9,9 @@
    :value="value"
    @input="handleInput"
    :disabled=disabled>
-  <span class="one-input_suffix">
-   <i class="on-input_icon one-icon-cancel" v-if="clearable && value" @click="clear"></i>
-   <i class="on-input_icon one-icon-visible" v-if="showPassword && type=='password'" @click="handlePassword"></i>
+  <span class="jay-input_suffix">
+   <i class="on-input_icon jay-icon-cancel" v-if="clearable && value" @click="clear"></i>
+   <i class="on-input_icon jay-icon-visible" v-if="showPassword && type=='password'" @click="handlePassword"></i>
  </span>
  </div>
 </template>
@@ -76,12 +76,12 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-  .one-input{
+  .jay-input{
     width: 100%;
     position: relative;
     font-size: 14px;
     display: inline-block;
-    .one-input_inner{
+    .jay-input_inner{
       -webkit-appearance: none;
       background-color: #fff;
       background-image: none;
@@ -112,11 +112,11 @@ export default {
     }
   }
   // 后面加suffix的意思是后面如果有后缀的话，触发该样式
-  .one-input_suffix{
-    .one-input_inner{
+  .jay-input_suffix{
+    .jay-input_inner{
       padding-right: 30px;
     }
-    .one-input_suffix{
+    .jay-input_suffix{
       position: absolute;
       right: 10px;
       height: 100%;

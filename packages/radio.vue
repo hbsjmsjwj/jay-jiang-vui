@@ -1,15 +1,15 @@
 <template>
-  <label class="one-radio" :class="{'is-checked': label == model}">
-    <span class="one-radio_input">
-      <span class="one-radio_inner"></span>
+  <label class="jay-radio" :class="{'is-checked': label == model}">
+    <span class="jay-radio_input">
+      <span class="jay-radio_inner"></span>
       <input
       type="radio"
-      class="one-radio_original"
+      class="jay-radio_original"
       :value="label"
       v-model="model"
       >
     </span>
-    <span class="one-radio_label">
+    <span class="jay-radio_label">
       <slot></slot>
       <!-- 如果没有传值，就把label作为文本显示 -->
       <template v-if="!$slots.default">{{label}}</template>
@@ -57,7 +57,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-  .one-radio{
+  .jay-radio{
     color: #606266;
     font-weight: 500;
     line-height: 1;
@@ -71,7 +71,7 @@ export default {
     -moz-user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
-    .one-radio_input{
+    .jay-radio_input{
       white-space: nowrap;
       cursor: pointer;
       outline: none;
@@ -79,7 +79,7 @@ export default {
       line-height: 1;
       position: relative;
       vertical-align: middle;
-      .one-radio_inner{
+      .jay-radio_inner{
         border: 1px solid #dcdfe6;
         border-radius: 100%;
         width: 14px;
@@ -102,7 +102,7 @@ export default {
           transition: transform .15s ease-in;
         }
       }
-      .one-radio_original{
+      .jay-radio_original{
         opacity: 0;
         outline: none;
         position: absolute;
@@ -114,15 +114,15 @@ export default {
         margin: 0;
       }
     }
-    .one-radio_label{
+    .jay-radio_label{
       font-size: 14px;
       padding-left: 10px;;
     }
   }
   // 选中的样式
-  .one-radio.is-checked{
-    .one-radio_input{
-      .one-radio_inner{
+  .jay-radio.is-checked{
+    .jay-radio_input{
+      .jay-radio_inner{
         border-color: #409eff;
         background-color: #409eff;
         &:after{
@@ -130,7 +130,7 @@ export default {
         }
       }
     }
-    .one-radio_label{
+    .jay-radio_label{
       color:#409eff;
     }
   }

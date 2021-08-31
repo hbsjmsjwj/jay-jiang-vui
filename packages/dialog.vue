@@ -1,25 +1,25 @@
 <template>
   <transition name="dialog-fade">
     <!-- @click.self避免冒泡，只有点击自己时才能触发   -->
-    <div class="one-dialog_wrapper" v-show="visible" @click.self="handleClose">
-      <div class="one-dialog" :style="{width:width,marginTop:top}">
-        <div class="one-dialog_header">
+    <div class="jay-dialog_wrapper" v-show="visible" @click.self="handleClose">
+      <div class="jay-dialog" :style="{width:width,marginTop:top}">
+        <div class="jay-dialog_header">
           <slot name="title">
             <!-- 将span放到slot内，这样不仅可以定义title文本，还可以定义样式等 -->
-          <span class="one-dialog_title">
+          <span class="jay-dialog_title">
             {{title}}
           </span>
           </slot>
-          <button class="one-dialog_headerbtn" @click="handleClose">
-            <i class="one-icon-close"></i>
+          <button class="jay-dialog_headerbtn" @click="handleClose">
+            <i class="jay-icon-close"></i>
           </button>
         </div>
-        <div class="one-dialog_body">
+        <div class="jay-dialog_body">
           <!-- 内容可能是除span以外的其他内容，比如列表等，所以在这里使用插槽，并且不规定插槽内具体的标签 -->
           <!-- 并且在这里使用匿名插槽，使用匿名插槽的好处就是不用指定名称，这样在不使用<template v-slot>指定插槽内容的时候，也可以自定义内容 -->
           <slot></slot>
         </div>
-        <div class="one-dialog_footer">
+        <div class="jay-dialog_footer">
           <!-- 如果footer不传递内容，则不显示footer -->
           <slot name="footer" v-if="$slots.footer">
           </slot>
@@ -70,7 +70,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.one-dialog_wrapper{
+.jay-dialog_wrapper{
   position: fixed;
   top: 0;
   right: 0;
@@ -80,7 +80,7 @@ export default {
   margin: 0;
   z-index: 2001;
   background-color: rgba(0,0,0,0.5);
-  .one-dialog{
+  .jay-dialog{
     position: relative;
     margin: 15vh auto 50px;
     background: #fff;
@@ -90,12 +90,12 @@ export default {
     width: 30%;
     &_header{
       padding: 20px 20px 10px;
-      .one-dialog_title{
+      .jay-dialog_title{
         line-height: 24px;
         font-size: 18px;
         color: #303133;
       }
-      .one-dialog_headerbtn{
+      .jay-dialog_headerbtn{
         position: absolute;
         top: 20px;
         right: 20px;
@@ -105,7 +105,7 @@ export default {
         outline: none;
         cursor: pointer;
         font-size: 16px;
-        .one-icon-close{
+        .jay-icon-close{
           color:909399
         }
       }
@@ -120,7 +120,7 @@ export default {
       padding: 10px 20px 20px;
       text-align: right;
       box-sizing: border-box;
-      ::v-deep .one-button:first-child{
+      ::v-deep .jay-button:first-child{
         margin-right: 20px;
       }
     }

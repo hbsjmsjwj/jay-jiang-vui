@@ -1,9 +1,9 @@
 <template>
-  <div class="one-switch" :class="{'is-checked':value}" @click="handleClick">
-    <span class="one-switch_core" ref="core">
-      <span class="one-switch_button"></span>
+  <div class="jay-switch" :class="{'is-checked':value}" @click="handleClick">
+    <span class="jay-switch_core" ref="core">
+      <span class="jay-switch_button"></span>
     </span>
-    <input type="checkbox" class="one-switch_input" :name="name" ref="input">
+    <input type="checkbox" class="jay-switch_input" :name="name" ref="input">
   </div>
 </template>
 <script>
@@ -62,14 +62,14 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-  .one-switch{
+  .jay-switch{
     display: inline-block;
     align-items: center;
     position: relative;
     font-size: 14px;
     line-height: 20px;
     vertical-align: middle;
-    .one-switch_core{
+    .jay-switch_core{
     margin: 0;
     display: inline-block;
     position: relative;
@@ -83,7 +83,7 @@ export default {
     cursor: pointer;
     transition: border-color .3s,background-color .3s;
     vertical-align: middle;
-    .one-switch_button{
+    .jay-switch_button{
       position:absolute;
       top: 1px;
       left: 1px;
@@ -97,16 +97,16 @@ export default {
   }
   // 选中样式
   .is-checked {
-    .one-switch_core{
+    .jay-switch_core{
       border-color: #409eff;
       background-color: #409eff;
-      .one-switch_button {
+      .jay-switch_button {
         transform: translateX(20px);
       }
     }
   }
   // 隐藏input标签
-  .one-switch_input{
+  .jay-switch_input{
     position:absolute;
     width: 0;
     height: 0;

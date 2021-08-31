@@ -1,5 +1,5 @@
 <template>
-  <div class="one-radio-group">
+  <div class="jay-radio-group">
     <slot></slot>
   </div>
 </template>
